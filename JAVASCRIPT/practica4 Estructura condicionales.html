@@ -14,12 +14,47 @@
 
 <body>
     <script>
-        var n1, n2, n3;
-        n1 = parseInt(prompt('Ingrese el primer numero',''));
-        n2 = parseInt(prompt('Ingrese el segundo numero',''));
-        n3 = parseInt(prompt('Ingrese el tercer numero',''));
-        
-        
+
+        promedio();
+
+        function promedio() {
+            var n1, n2, n3;
+            n1 = parseInt(prompt('Ingrese numero 1', ''));
+            n2 = parseInt(prompt('Ingrese numero 2', ''));
+            n3 = parseInt(prompt('Ingrese numero 3', ''));
+
+            var prod = parseFloat(((n1 + n2 + n3) / 3));
+
+            if (prod >= 7)
+                document.write('Promocionado');
+                
+            else {
+
+                if (prod >= 4)
+                    document.write('Regular');
+                else
+                    document.write('Reprobado');
+            }
+        }
+
+        function prueba1() {
+            var n1, n2, n3;
+            n1 = parseInt(prompt('Ingrese el primer numero', ''));
+            n2 = parseInt(prompt('Ingrese el segundo numero', ''));
+            n3 = parseInt(prompt('Ingrese el tercer numero', ''));
+
+            if (n1 > n2 && n1 > n3)
+                document.write('El numero mayor es el ' + n1 + '<br>');
+
+            else {
+                if (n2 > n3)
+                    document.write('El segundo es: ' + n2 + '<br>');
+
+                else
+                    document.write('El tercero es: ' + n3 + '<br>');
+            }
+
+        }
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

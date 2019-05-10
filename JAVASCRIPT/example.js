@@ -1,5 +1,6 @@
-function SwitchPrueba1() {
-    var valor;
+function mostrarFecha()
+{
+    var fecha = new Date();
 
     valor = parseInt(prompt('Ingrese un valor promediado entre 1 y 5'));
 

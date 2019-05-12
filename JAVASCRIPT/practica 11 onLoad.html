@@ -12,42 +12,29 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
-    <div class="container mt-5">
-        <h1>Prueba de select</h1>
-        <hr>
+<body onLoad="cargar()">
+    <div class="container">
 
-        <div class="input-group mb-3">
-            <select class="custom-select" onchange="prueba()" id="select1">
-                <option selected disabled hidden></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            <div class="input-group-append">
-                <label class="input-group-text" for="select1">Options</label>
+        <form action="" class="">
+            <div class="form-group">
+                <label for="nombre">Ingrese su nombre</label>
+                <input type="text" class="form-control" id="nombre">
+                <hr>
+
+                <label for="apellido">Ingrese su apellido</label>
+                <input type="text" class="form-control" id="apellido">
             </div>
-        </div>
-
-
-
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Cantidad">
-        </div>
+        </form>
     </div>
 
     <script>
-        function prueba()
+        function cargar()
         {
-            var temp = document.getElementById('select1')
-            for(var i = 1; i < temp.length; i++)
-            {
-                console.log(temp.options[i].text);
-            }
+            document.getElementById('nombre').focus();
         }
     </script>
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>

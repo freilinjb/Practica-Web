@@ -1,0 +1,60 @@
+html,
+body {
+  height: 100%;
+}
+ 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+ 
+.flex {
+  display: inline-flex;
+  width: 34%;
+  height: 40%;
+}
+ 
+.flex img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+.flex > .image {
+  margin-right: 0.6em;
+  position: relative;
+  overflow: hidden; /*  Add Later */
+  background: #444;
+  box-shadow: 1px 2px 10px #444;
+  transition: all 0.9s ease;
+}
+ 
+.social-icons {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  height: 30%;
+  padding-right: 1.4em;
+  transform: translateY(100px);
+  transition: transform 0.8s ease;
+  background: lightcyan;
+}
+.social-icons i {
+  font-size: 25px;
+  padding: 0.4em;
+  float: right;
+  color: #444;
+}
+.social-icons i:hover {
+  color: lightcoral;
+}
+ 
+.flex > .image:hover .social-icons {
+  transform: rotate(-10deg) translateY(40px);
+}
+.image:hover img {
+  mix-blend-mode: soft-light;
+  transform: scale(1.2);
+}

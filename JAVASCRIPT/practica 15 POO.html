@@ -9,26 +9,38 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body onLoad="abrirVentana()">
-      <div class="container">
-          
-      </div>
+  <body>
+      
 
-      <script>
-          function abrirVentana()
-          {
-              var ventana = open('','','width=' + screen.availWidth + ',heigth=' + screen.availHeight/2);
-          }
+    <script>
+        function Cliente(nombre,saldo)
+        {
+            this.nombre = nombre;
+            this.saldo = saldo;
+            this.depositar = depositar;
+            this.extraer = extraer;
+        }
 
-          function verificarEntrada()
-          {
-              if(window.confirm('Desa salir del sitio'))
-                window.location = 'http://www.google.com/';
+        function depositar(dinero)
+        {
+            this.saldo = this.saldo + dinero;
+        }
 
-            else   
-                window.alert('No hay problema')
-          }
-      </script>
+        function extraer(dinero)
+        {
+            this.saldo = this.saldo - dinero;
+        }
+
+        var Cliente = new Cliente('Freilin Jose',1500);
+        document.write('Nombre del cliente: ' + Cliente.nombre + '<br>')
+        document.write('Saldo actual: ' + Cliente.saldo + '<br>')
+        Cliente.depositar(500);
+        document.write('Saldo luego de depositar: ' + Cliente.saldo + '<br>')
+
+        Cliente.extraer(250);
+        document.write('Saldo luego de extraer: ' + Cliente.saldo + '<br>')
+
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

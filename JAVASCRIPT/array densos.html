@@ -9,25 +9,38 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body onLoad="abrirVentana()">
+  <body>
       <div class="container">
           
       </div>
 
       <script>
-          function abrirVentana()
+          function prueba()
           {
-              var ventana = open('','','width=' + screen.availWidth + ',heigth=' + screen.availHeight/2);
+              var vec = [];
+              var valor;
+              var indice = 0;
+
+              do{
+                  valor = parseInt(prompt('Ingrese un valor entero (0 para finalizar)',''));
+
+                  if(valor != 0)
+                  {
+                      vec[indice] = valor;
+                      indice++;
+                  }
+              }while(valor != 0);
+
+              var suma = 0;
+              for(var i = 0; i < vec.length; i++)
+              {
+                  suma = suma+vec[i];
+              }
+              document.write('Se ingresaron: ' + vec.length + 'valores<br4>');
+              document.write('La suma de los valores ingresados es: ' + suma + '<br>');
           }
 
-          function verificarEntrada()
-          {
-              if(window.confirm('Desa salir del sitio'))
-                window.location = 'http://www.google.com/';
-
-            else   
-                window.alert('No hay problema')
-          }
+          prueba();
       </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

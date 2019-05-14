@@ -49,4 +49,4 @@ function cadenas()
     
 }
 
-cadenas();
+recorerVentor();

@@ -17,4 +17,4 @@ process.stdout.write('Cual es el apellido: ');
 process.stdin.on('data',function(data){
     process.stdout.write(`El nombre completo es ${nombre} ${data}\n`);
     process.exit();
-})
+});

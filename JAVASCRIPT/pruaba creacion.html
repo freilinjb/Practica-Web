@@ -16,19 +16,20 @@
     <div class="container mt-5">
         <p id="prueba">Prueba</p>
         <input type="button" class="btn btn-primary" value="Click me!!" onclick="agregarDatos()">
-        <input type="button" class="btn btn-primary" value="Click me!!" onclick="modoficar()">
+        <input type="button" class="btn btn-primary" value="Eliminar Texto!!" onclick="eliminarNodo()">
     </div>
 
     <script>
         function agregarDatos() {
+           
             // var parrafo = document.getElementById('prueba');
-            // var contenido = document.createTextNode('Hola mundo desde JavaScript');
-
+            // var contenido = document.createTextNode('Prueba del mensaje QUE ENVIE');
             // parrafo.appendChild(contenido);
-
             // document.body.appendChild(parrafo);
+
             var parrafo = document.getElementById('prueba');
-            var contenido = document.createTextNode('Prueba del mensaje QUE ENVIE');
+
+            var contenido = document.createTextNode('PREUBA DE MENSAJE');
             parrafo.appendChild(contenido);
             document.body.appendChild(parrafo);
         }
@@ -36,6 +37,15 @@
         {
             document.getElementById('prueba').value = '';
             document.getElementById('prueba').innerText = null;
+        }
+
+        function eliminarNodo()
+        {
+            var parrafo = document.getElementById('prueba');
+            parrafo.parentNode.removeChild(parrafo);
+
+            // parrafo = document.getElementById('prueba');
+            // parrafo.parentNode.removeChild(parrafo);
         }
     </script>
     <!-- Optional JavaScript -->

@@ -40,3 +40,12 @@ participante.addPuntos(50);
 participante.removerPuntos(41);
 console.log(participante.nombre);
 participante.imprimir();
+
+console.log('Escriba su nombre: ');
+
+var mensaje = process.openStdin();
+mensaje.addListener('data',function(d){
+    console.log('Su nombre es: ' + d.toString().trim());
+    process.exit();
+})
+

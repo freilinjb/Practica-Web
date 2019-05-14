@@ -12,8 +12,9 @@
   <body>
       <div class="container mt-5">
           <div class="form-control" style="padding:100px; margin: 0px">
-              <input type="button" id="btn" class="btn btn-primary" value="Click me" onMouseOver="EventoMouse()" onMouseOut="EventoMouseOut()">
+              <input type="button" id="btn" class="btn btn-primary" value="Click me" onMouseOver="EventoMouse()" onMouseOut="EventoMouseOut()" onclick="addText()">
           </div>
+          <p id="texto1">sad</p>
           <div class="cuadro" style="width:200px; height: 200px; background-color: aqua; border-radius: 20px;" onMouseOver="this.style.bordderColor='black'"></div>
       </div>
 
@@ -28,16 +29,21 @@
               
           }
 
-          document.getElementById('btn').onclick = function(){
-              alert('hola mundo');
-          }
+          //Metodo que hace clc
+        //   document.getElementById('btn').onclick = function(){
+        //       alert('hola mundo');
+        //   }
           //Funcion que se ejecuta despues de cargar la pagina
 
-          window.onload = function(){
-              alert('Hola Mundo');
-          }
-
-          
+        //   window.onload = function(){
+        //       alert('Hola Mundo');
+        //   }
+            function addText() {
+                var parrafo = document.createElement('p');
+                var contenido = document.createTextNode('Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vitae earum provident sunt tempora tenetur dolore distinctio commodi iusto illum inventore quisquam voluptatibus dicta harum, suscipit autem. Iste, tempora eveniet repellendus repellat labore eum, facere rem, eos libero distinctio officia.');
+                parrafo.appendChild(contenido);
+                document.body.appendChild(parrafo);
+            }
           </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

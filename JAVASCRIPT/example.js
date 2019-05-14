@@ -46,7 +46,6 @@ function cadenas()
 
     for(i in letras)
         console.log(letras[i]);
-    
 }
 
 recorerVentor();

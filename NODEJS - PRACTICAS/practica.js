@@ -5,10 +5,10 @@ console.log('Multiplicacion: '+( n1 * n2));
 console.log("%d x %d = %d",n1,n2,n1*n2);
 
 
-var json = {nombre: 'Freilin Jose',apellido: 'Jerez Brito'};
+var json = {Nombre: 'Freilin Jose',apellido: 'Jerez Brito'};
 console.log("%j",json);
 
-console.log(`El nombre es: ${n2} El numero ${n1}`);
+console.log(`El Nombre es: ${n2} El numero ${n1}`);
 
 console.log(__filename);
 console.log(__dirname);

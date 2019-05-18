@@ -9,12 +9,12 @@ function leerOpcion(opcion){
         return process.argv[index + 1];
 }
 
-var nombre = leerOpcion("-nombre");
+var Nombre = leerOpcion("-Nombre");
 
-console.log('El nombre es: ' + nombre);
+console.log('El Nombre es: ' + Nombre);
  
 process.stdout.write('Cual es el apellido: ');
 process.stdin.on('data',function(data){
-    process.stdout.write(`El nombre completo es ${nombre} ${data}\n`);
+    process.stdout.write(`El Nombre completo es ${Nombre} ${data}\n`);
     process.exit();
 });

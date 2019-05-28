@@ -25,7 +25,7 @@ function mustraMensaje()
 {
     var mensaje = 'Mensaje de variable dentro'
     console.log(mensaje);
-    
+   //Prueba de este mensaje 
 }
 
 mustraMensaje();

@@ -13,38 +13,17 @@
 </head>
 
 <body>
+    <div class="container">
+        <form action="">
+            <input type="button" value="Enviar" onclick="this.disable=true;this.value='Enviando...'">
+            <input type="text" id="texto" onkeypress="return permite(event, 'num')" />
+            <input type="text" id="texto" onkeypress="return permite(event, 'car')" />
+            <input type="text" id="texto" onkeypress="return permite(event, 'num_car')" />
 
-    <div class="container mt-5">
-        <h1>Prueba de select</h1>
-        <hr>
-
-        <div class="input-group mb-3">
-            <select class="custom-select" onchange="prueba()" id="select1">
-                <option selected disabled hidden></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            <div class="input-group-append">
-                <label class="input-group-text" for="select1">Options</label>
-            </div>
-        </div>
-
-
-
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Cantidad" onkeypress="return permite(event, 'num')">
-        </div>
+        </form>
     </div>
 
     <script>
-        function prueba() {
-            var temp = document.getElementById('select1')
-            for (var i = 1; i < temp.length; i++) {
-                console.log(temp.options[i].text);
-            }
-        }
-
         function permite(elEvento, permitidos) {
             // Variables que definen los caracteres permitidos
             var numeros = "0123456789";

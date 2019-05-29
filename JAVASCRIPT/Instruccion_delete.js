@@ -16,7 +16,7 @@ for(f = 0; f < vec.length; f++)
     console.log('['+vec[f]+']');
 
 var vec = [10, 20, 30, 40, 50];
-var cadena = vec.join('|');
+var cadena = vec.join('\\');
+
 
 console.log(cadena);
-<i class="fas fa-star-of-david    "></i>

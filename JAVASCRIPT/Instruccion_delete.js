@@ -18,3 +18,12 @@ for(f = 0; f < vec.length; f++)
 var vec = [10, 20, 30, 40, 50];
 var cadena = vec.join('\\');
 
+for (i in vec)
+    console.log(vec[i]);
+    
+const cars = ["🚗", "🚙", "🚕"];
+
+for(i in cars)
+    console.log(cars[i]);
+    
+console.log(cadena);

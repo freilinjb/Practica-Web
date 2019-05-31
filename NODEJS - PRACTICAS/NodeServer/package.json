@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
-    },
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mssql": "^5.1.0"
   },
   "devDependencies": {
     "morgan": "^1.9.1",

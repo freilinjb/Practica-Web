@@ -18,5 +18,3 @@ for(f = 0; f < vec.length; f++)
 var vec = [10, 20, 30, 40, 50];
 var cadena = vec.join('\\');
 
-
-console.log(cadena);

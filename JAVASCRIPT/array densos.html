@@ -39,8 +39,24 @@
               document.write('Se ingresaron: ' + vec.length + 'valores<br4>');
               document.write('La suma de los valores ingresados es: ' + suma + '<br>');
           }
+          function prueba1()
+          {
+            var vec = [];
+            var valor;
+            var indice = 0;
 
-          prueba();
+            do
+            {
+              valor = parseInt(prompt('Ingrese su nombre:',''));
+
+              if(valor != 0)
+              {
+                vec[indice] = valor;
+                indice++;
+              }
+            }while(valor != 0);
+          }
+          prueba1();
       </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

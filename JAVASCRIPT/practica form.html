@@ -20,13 +20,25 @@
       <label for="pregunta_no">No</label>
       <input type="radio" value="No" name="pregunta" id="pregunta_no">
     </div>
+    <button class="btn-primary btn" onclick="prueba()">Click</button>
   </div>
 
   <script>
-    var elemento = document.getElementsByName("pregunta");
 
-    for(var i = 0; i < elemento.length; i++)
-      alert(" Elemento : " + elemento[i].value + "\n Seleccionado: ");
+    function prueba()
+    {
+      var elemento = document.getElementById("pregunta");
+
+      for(var i = 0; i < elemento.length; i++)
+      {
+        alert(" El elemento : " + elemento[i].value + " esta seleccionado");
+      }  
+    }
+    // }
+    // var elemento = document.getElementsByName("pregunta");
+
+    // for(var i = 0; i < elemento.length; i++)
+    //   alert(" Elemento : " + elemento[i].value + "\n Seleccionado: ");
   </script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

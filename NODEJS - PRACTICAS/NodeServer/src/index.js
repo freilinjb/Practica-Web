@@ -1,7 +1,26 @@
-const express = require('express');
-path = require('path');
-morgan = require('morgan');
-var sql = require()
+var express = require('express');
+var sql = require('mssql');
+var app = express();
+
+// app.get('/', function (req, res) {
+
+
+//     // config for your database
+//     var config = {
+//         user: 'freilinjb',
+//         password: 'fre123i4',
+//         server: 'DESKTOP-0GJ4POO\\SQLEXPRESS',
+//         database: 'Proyecto'
+//     };
+
+//     // connect to your database
+//     sql.connect(config, function (err) {
+
+//         if (err) console.log(err);
+
+//         // create Request object
+//         var request = new sql.Request();
+
 
 const app = express();
 

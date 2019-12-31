@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
 
     // config for your database
     var config = {
-        user: 'freilinjb',
+        user: 'root',
         password: 'fre123i4',
         server: 'DESKTOP-0GJ4POO\\SQLEXPRESS',
         database: 'Proyecto'

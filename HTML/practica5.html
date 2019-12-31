@@ -11,14 +11,14 @@
   </head>
   <body>
       <style>
-          body {background-color: powderblue;}
+          body {background-color: rgb(22, 127, 141);}
           h1{color: rebeccapurple;}
           p{color: blue}
       </style>
 
       <div class="container mt-5">
           <h1>Practica</h1>
-          <button class="btn btn-primary" onclick="myFunction1()">Click me</button>
+          <button class="btn btn-primary" onclick="myFunction()">Click me</button>
           <button class="btn btn-primary" onclick="Limpiar()">Click me</button>
           <p id="demo1">Prueba</p>
       </div>
@@ -28,7 +28,7 @@
             var x = document.getElementById('demo1').innerHTML;
             x += "|";
             document.getElementById('demo1').innerHTML += x;
-            
+            console.log(x);
           }
 
           function Limpiar()

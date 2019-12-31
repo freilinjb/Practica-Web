@@ -15,7 +15,9 @@
 <body>
     <div class="container">
         <form action="">
-            <input type="text" id="nombre" onfocus="vaciar(this)" onblur="verificarEntrada(this)">
+            <input type="text" class="form-control" id="nombre" onfocus="verificarEntrada(this)" onblur="verificarEntrada(this)">
+            <hr>
+            <input type="text" class="form-control" id="apellido">
         </form>
     </div>
 
@@ -27,8 +29,8 @@
 
         function verificarEntrada(control)
         {
-            if(control.value == '')
-                alert('Debe ingresar datos');
+            console.log('Hola mundo');
+            
         }
     </script>
     <!-- Optional JavaScript -->

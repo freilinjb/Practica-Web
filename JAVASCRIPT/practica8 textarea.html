@@ -17,12 +17,24 @@
               <input type="button" name="btn1" id="btn1" onclick="controlarCaracteres()" value="Click me">
           </div>
       </div>
+      <div class="col-6 align-self-center">
+        <div id="alert">
+
+        </div>
+    </div>
 
       <script>
           function controlarCaracteres()
           {
               if(document.getElementById('curriculum').value.length > 10)
-                alert('contiene demaciados caracteres');
+              {
+                document.getElementById('alerta').innerHTML = `<div class="alert alert-success" role="alert">
+                          <h4 class="alert-heading">Well done!</h4>
+                          <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                          <hr>
+                          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                        </div>`
+              }
           }
       </script>
     <!-- Optional JavaScript -->

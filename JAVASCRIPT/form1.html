@@ -28,10 +28,10 @@
     </div>
 
     <div class="container col-6 justify-content-center">
-        <div class="form-group">
-            <p>Cantidad: <spam id="cantidad">0</spam></p>
-            <button class="btn btn-primary" onclick="prueba()">Click me</button>
-            <button class="btn btn-primary" onclick="prueba1()">Click me</button>
+        <div class="form-group mt-5">
+            <p class="badge badge-pill badge-danger" id="cantidad">0</p>
+            <button class="btn btn-primary" onclick="Sumar()">Click me</button>
+            <button class="btn btn-primary" onclick="Restar()">Click me</button>
         </div>
     </div>
 
@@ -43,11 +43,18 @@
             cantidad = cantidad+1;
             document.getElementById('cantidad').innerText = cantidad;
         }
-        function prueba1() {
-            var cantidad = parseInt(document.getElementById('cantidad').innerText);
-            console.log(cantidad);
-            
-            cantidad = cantidad-1;
+        function Restar() {
+            let cantidad = parseInt(document.getElementById('cantidad').innerText);
+            cantidad = cantidad-1
+
+            document.getElementById('cantidad').innerText = cantidad;
+        }
+
+        function Sumar(){
+            let cantidad = parseInt(document.getElementById('cantidad').innerText);
+
+            cantidad = cantidad+1
+
             document.getElementById('cantidad').innerText = cantidad;
         }
     </script>

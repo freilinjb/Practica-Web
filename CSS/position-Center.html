@@ -5,40 +5,29 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <style>
+        .container{
+            position: relative;
+        }
+        p{
+            left: 0;
+            text-align: center;
+            top: 50%;
+            width: 100%;
+            position: absolute;
+        }
+        img{
+            opacity: 0.5;
+        }
+    </style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-      <script>
-        //   var nombre;
-        //   var nota;
-
-        //   nombre = prompt('Ingrese nombre: ','');
-        //   nota = parseInt(prompt('Ingrese su nota',''));
-
-        //   if(nota >= 4)
-        //     document.write(nombre + ' esta aprobado con un ' + nota);
-        
-        //   else
-        //   document.write(nombre + ' esta reprobado con un ' + nota);
-
-        var nombre,apellido,edad;
-        nombre = prompt('Ingrese su nombre','');
-        apellido = prompt('Ingrese su apellido','');
-        edad = parseInt(prompt('Ingrese su edad',''));
-
-        document.write('Nombre: ' + nombre);
-        document.write('<br>');
-        document.write('Apellido: ' + apellido);
-        document.write('<br>');
-
-        if(edad >= 18)
-            document.write('Usted es mayor de edad');
-        else
-            document.write('Usted es menor de edad');
-
-      </script>
+      <div class="container">
+          <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="Img" width="800" height="400">
+          <p>Center</p>
+      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -36,24 +36,40 @@
     </div>
 
     <script>
-        function prueba() {
-            var cantidad = parseInt(document.getElementById('cantidad').innerText);
-            console.log(cantidad);
+        // function prueba() {
+        //     var cantidad = parseInt(document.getElementById('cantidad').innerText);
+        //     console.log(cantidad);
             
-            cantidad = cantidad+1;
-            document.getElementById('cantidad').innerText = cantidad;
-        }
-        function Restar() {
-            let cantidad = parseInt(document.getElementById('cantidad').innerText);
-            cantidad = cantidad-1
+        //     cantidad = cantidad+1;
+        //     document.getElementById('cantidad').innerText = cantidad;
+        // }
+        // function Restar() {
+        //     let cantidad = parseInt(document.getElementById('cantidad').innerText);
+        //     cantidad = cantidad-1
 
-            document.getElementById('cantidad').innerText = cantidad;
-        }
+        //     document.getElementById('cantidad').innerText = cantidad;
+        // }
+
+        // function Sumar(){
+        //     let cantidad = parseInt(document.getElementById('cantidad').innerText);
+
+        //     cantidad = cantidad+1
+
+        //     document.getElementById('cantidad').innerText = cantidad;
+        // }
 
         function Sumar(){
-            let cantidad = parseInt(document.getElementById('cantidad').innerText);
+            var cantidad = parseInt(document.getElementById('cantidad').innerText);
+            console.log(cantidad);
 
-            cantidad = cantidad+1
+            cantidad = cantidad+1;
+
+            document.getElementById('cantidad').innerText = cantidad;
+        }
+
+        function Restar(){
+            var cantidad = parseInt(document.getElementById('cantidad').innerText);
+            cantidad = cantidad-1;
 
             document.getElementById('cantidad').innerText = cantidad;
         }

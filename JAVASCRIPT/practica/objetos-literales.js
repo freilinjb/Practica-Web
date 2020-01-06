@@ -33,6 +33,9 @@ var participante = {
     },
     removerPuntos: function(score){
         this.punto = this.punto - score;
+    },
+    printPuntos(){
+    console.log(`Puntos: ${this.punto}`);
     }
 }
 
@@ -46,6 +49,8 @@ console.log('Escriba su nombre: ');
 var mensaje = process.openStdin();
 mensaje.addListener('data',function(d){
     console.log('Su nombre es: ' + d.toString().trim());
+    participante.printPuntos();
+    
     process.exit();
 })
 

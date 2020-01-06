@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <style>
+    form {
+      height: 640px;
+    }
+  </style>
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <div class="container sa col-8 mt-5">
+        <div class="row justify-content-center my-5">
+          <div class="col-10 shadow rounded">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control rounded-pill " placeholder="Ingrerse su nombre">
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control rounded-pill" placeholder="Ingrerse su nombre">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <input type="number" id="numero" class="form-control rounded-pill" placeholder="Ingrerse su Apellido">
+                  </div>
+                </div> 
+                <div class="col-10 align-self-center">
+                  <button class="btn btn-info btn-block rounded-pill shadow-lg" id="btn" type="button">Click me!!</button>
+                  <p id="mensaje" class="my-5"></p>
+                </div> 
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <script>
+        //   var nombre;
+        //   var nota;
+
+        //   nombre = prompt('Ingrese nombre: ','');
+        //   nota = parseInt(prompt('Ingrese su nota',''));
+
+        //   if(nota >= 4)
+        //     document.write(nombre + ' esta aprobado con un ' + nota);
+        
+        //   else
+        //   document.write(nombre + ' esta reprobado con un ' + nota);
+
+        var myFunction2 = () => {
+          var x, mensaje;
+          mensaje = document.getElementById('mensaje');
+          mensaje.innerHTML = "";
+
+          x = document.getElementById('numero').value;
+          try{
+            if(x == "") throw "Vacio";
+            if(isNaN(x)) throw "No es un numero";
+            x = Number(x);
+
+            if(x < 5) throw "Demasiado bajo";
+            if(x > 10) throw "Demasiado alto";
+
+          }catch(err)
+          {
+            mensaje.innerHTML = `Este es la salida ${err}`;
+          }
+        };
+
+        document.getElementById('btn').addEventListener('click',myFunction2);
+
+        var persona = {
+          nombre : 'Freilin J.',
+          apellido: 'Jerez Brito',
+          nombrerCompleto: function(){
+            return this.nombre + " "+ this.apellido;
+          }
+        };
+
+        document.getElementById('mensaje').innerHTML = persona.nombrerCompleto();
+        alert(persona.nombrerCompleto());
+
+        function myFunction(){
+          var x, mensaje;
+          mensaje = document.getElementById('mensaje');
+          mensaje.innerHTML = "";
+
+          x = document.getElementById('numero').value;
+          try{
+            if(x == "") throw "Vacio";
+            if(isNaN(x)) throw "No es un numero";
+            x = Number(x);
+
+            if(x < 5) throw "Demasiado bajo";
+            if(x > 10) throw "Demasiado alto";
+
+          }catch(err)
+          {
+            mensaje.innerHTML = `Este es la salida ${err}`;
+          }
+        }
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6 my-5">
+                <div class="form-group">
+                    <div class="form-check">
+                        <input id="my-input1" class="form-check-input" type="checkbox" id="check1" name="" value="true">
+                        <label for="my-input1" class="form-check-label">Prueba</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="my-input2" class="form-check-input" type="checkbox" id="check2" name="" value="true">
+                        <label for="my-input2" class="form-check-label">Prueba</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="my-input3" class="form-check-input" type="checkbox" id="check3" name="" value="true">
+                        <label for="my-input3" class="form-check-label">Prueba</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="my-input4" class="form-check-input" type="checkbox" id="check4" name="" value="true">
+                        <label for="my-input4" class="form-check-label">Prueba</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Negativo</label>
+                        <span class="badge badge-pill badge-danger" id="negativo">0</span>
+                        <label for="">Positivo</label>
+                        <span class="badge badge-pill badge-primary" id="positivo">0</span>
+                    </div>
+                </div>
+                <hr>
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script>
+        function contarCheck() {
+            var elementos = document.getElementsByClassName('form-check-input');
+            var contadorPositivo = 0;
+            var contadorNegativo = 0;
+            for (let i = 0; i < elementos.length; i++) {
+                if (elementos[i].checked)
+                    contadorPositivo = contadorPositivo + 1;
+                else
+                    contadorNegativo = contadorNegativo + 1;
+            }
+            console.log(`Negativos: ${contadorNegativo}`);
+
+            document.getElementById('positivo').innerText = contadorPositivo;
+            document.getElementById('negativo').innerText = contadorNegativo;
+
+            console.log(`Positivo: ${contadorPositivo}`);
+
+            var nodo = document.createElement('li');
+            nodo.setAttribute(' ','sadfadsf');
+        }
+
+        var check = document.getElementsByClassName("form-check-input");
+        //Pregunta todos los elementos que contenga esa clase y los va validando por el evento click en el evento principal
+        for (i = 0; i < check.length; i++) {
+            check[i].addEventListener("click", function () {
+                contarCheck();
+            });
+        }
+
+
+
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
